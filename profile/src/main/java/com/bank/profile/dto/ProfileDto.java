@@ -1,11 +1,11 @@
 package com.bank.profile.dto;
 
-import java.util.HashSet;
 import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Singular;
 import lombok.Setter;
 
 /**
@@ -34,6 +34,6 @@ public class ProfileDto {
 
     private ActualRegistrationDto actualRegistration;
 
-    @Builder.Default
-    private Set<AccountDetailsDto> accountDetails = new HashSet<>();
+    @Singular("accountDetail")
+    private Set<AccountDetailsDto> accountDetails;
 }
