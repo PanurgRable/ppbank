@@ -1,5 +1,7 @@
 package com.bank.profile.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,6 +20,7 @@ public class ActualRegistrationDto {
 
     private Long id;
 
+    @NotBlank
     private String country;
 
     private String region;
@@ -36,5 +39,6 @@ public class ActualRegistrationDto {
 
     private String flatNumber;
 
+    @NotNull
     private Long postalIndex;
 }

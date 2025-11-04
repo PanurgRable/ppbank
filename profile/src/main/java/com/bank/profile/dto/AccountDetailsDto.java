@@ -1,5 +1,6 @@
 package com.bank.profile.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,5 +19,8 @@ public class AccountDetailsDto {
 
     private Long id;
 
+    @NotNull
     private Long accountId;
+
+    private Long profileId;
 }
