@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * REST controller exposing CRUD endpoints for registrations.
  */
+@Slf4j
 @RestController
 @RequestMapping("/registrations")
 @Validated
@@ -34,6 +36,7 @@ public class RegistrationController {
     @PostMapping
     @Operation(summary = "Create registration")
     public ResponseEntity<RegistrationDto> create(@Valid @RequestBody RegistrationDto dto) {
+        log.info("REST request to create registration");
         RegistrationDto created = registrationService.create(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
@@ -41,12 +44,14 @@ public class RegistrationController {
     @PutMapping("/{id}")
     @Operation(summary = "Update registration")
     public ResponseEntity<RegistrationDto> update(@PathVariable Long id, @Valid @RequestBody RegistrationDto dto) {
+        log.info("REST request to update registration {}", id);
         return ResponseEntity.ok(registrationService.update(id, dto));
     }
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Delete registration")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
+        log.info("REST request to delete registration {}", id);
         registrationService.delete(id);
         return ResponseEntity.noContent().build();
     }
@@ -54,12 +59,14 @@ public class RegistrationController {
     @GetMapping("/{id}")
     @Operation(summary = "Get registration by id")
     public ResponseEntity<RegistrationDto> getById(@PathVariable Long id) {
+        log.debug("REST request to get registration {}", id);
         return ResponseEntity.ok(registrationService.getById(id));
     }
 
     @GetMapping
     @Operation(summary = "Get all registrations")
     public ResponseEntity<List<RegistrationDto>> getAll() {
+        log.debug("REST request to get all registrations");
         return ResponseEntity.ok(registrationService.getAll());
     }
 }

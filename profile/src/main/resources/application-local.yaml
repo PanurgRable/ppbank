@@ -24,3 +24,6 @@ spring:
     drop-first: false
   application:
     name: profile-app
+profile:
+  security:
+    jwt-enabled: false
