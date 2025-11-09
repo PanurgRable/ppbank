@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/account/account.iml" filepath="$PROJECT_DIR$/account/account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/antifraud/antifraud.iml" filepath="$PROJECT_DIR$/antifraud/antifraud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/authorization/authorization.iml" filepath="$PROJECT_DIR$/authorization/authorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/history/history.iml" filepath="$PROJECT_DIR$/history/history.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../parent.iml" filepath="$PROJECT_DIR$/../parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/profile/profile.iml" filepath="$PROJECT_DIR$/profile/profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/public-info/public-info.iml" filepath="$PROJECT_DIR$/public-info/public-info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transfer/transfer.iml" filepath="$PROJECT_DIR$/transfer/transfer.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="account" target="17" />
+      <module name="antifraud" target="17" />
+      <module name="authorization" target="17" />
+      <module name="history" target="17" />
+      <module name="parent" target="1.5" />
+      <module name="profile" target="17" />
+      <module name="public-info" target="17" />
+      <module name="transfer" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
