@@ -4,6 +4,7 @@ import com.bank.profile.dto.AccountDetailsDto;
 import com.bank.profile.entity.AccountDetails;
 import com.bank.profile.entity.Profile;
 import org.mapstruct.AfterMapping;
+import org.mapstruct.Builder;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -12,7 +13,7 @@ import org.mapstruct.MappingTarget;
 /**
  * MapStruct mapper for {@link AccountDetails} entities.
  */
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", builder = @Builder(disableBuilder = true))
 public interface AccountDetailsMapper {
 
     @Mapping(target = "profileId", source = "profile.id")

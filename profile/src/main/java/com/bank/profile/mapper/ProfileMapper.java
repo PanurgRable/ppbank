@@ -4,6 +4,7 @@ import com.bank.profile.dto.ProfileDto;
 import com.bank.profile.entity.Profile;
 import java.util.HashSet;
 import org.mapstruct.AfterMapping;
+import org.mapstruct.Builder;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
@@ -14,7 +15,7 @@ import org.mapstruct.MappingTarget;
         PassportMapper.class,
         ActualRegistrationMapper.class,
         AccountDetailsMapper.class
-})
+}, builder = @Builder(disableBuilder = true))
 public interface ProfileMapper {
 
     ProfileDto toDto(Profile entity);
